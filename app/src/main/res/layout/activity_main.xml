@@ -58,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
+            android:textColor="@color/black"
             android:text="Który obraz chcesz wyświetlić" />
 
         <EditText
@@ -73,8 +74,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tło niebieskie? "
-        android:textColor="#505050"
+        android:textColor="@color/black"
         android:textSize="20sp"/>
+
+    <TextView
+    android:layout_marginTop="260dp"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004C40"
+        android:text="Autor: 000000000"
+        android:textColor="@color/black" />
 
 
 </LinearLayout>
