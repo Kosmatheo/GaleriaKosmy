@@ -29,7 +29,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/poprzednii"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -38,7 +38,7 @@
             android:backgroundTint="#004C40" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/nastepny"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -62,7 +62,7 @@
             android:text="Który obraz chcesz wyświetlić" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="1"
