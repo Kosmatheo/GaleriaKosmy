@@ -68,25 +68,13 @@
             android:inputType="number" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="20dp"
+    <Switch
+        android:id="@+id/switch1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:text="Tło niebieskie? "
+        android:textColor="#505050"
+        android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Tło niebieskie" />
-
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:thumbTint="#FFFFFF"/>
-    </LinearLayout>
 
 </LinearLayout>
