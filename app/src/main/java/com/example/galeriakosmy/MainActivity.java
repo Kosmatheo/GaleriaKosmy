@@ -1,11 +1,15 @@
 package com.example.galeriakosmy;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Switch;
+import android.widget.ViewSwitcher;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView Obraz;
     private EditText edittekst;
     private Switch swit;
+    private LinearLayout layout;
     private ArrayList<Obraz> Lista = new ArrayList<>();
     private int AktualnyObraz = 0;
 
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Obraz = findViewById(R.id.imageView);
         edittekst = findViewById(R.id.edit);
         swit = findViewById(R.id.switch1);
+        layout = findViewById(R.id.main);
 
         Lista.add(new Obraz(
                 R.drawable.kot1
@@ -78,6 +84,19 @@ public class MainActivity extends AppCompatActivity {
                         else{
                             AktualnyObraz = 0;
                             UstawObraz();
+                        }
+                    }
+                }
+        );
+        swit.setOnCheckedChangeListener(
+                new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                        if(b){
+                            layout.setBackgroundColor(Color.parseColor("#2196F3"));
+                        }
+                        else {
+                            layout.setBackgroundColor(Color.parseColor("#00796B"));
                         }
                     }
                 }
