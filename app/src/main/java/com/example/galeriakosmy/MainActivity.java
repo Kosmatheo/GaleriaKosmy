@@ -2,6 +2,8 @@ package com.example.galeriakosmy;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -98,6 +100,27 @@ public class MainActivity extends AppCompatActivity {
                         else {
                             layout.setBackgroundColor(Color.parseColor("#00796B"));
                         }
+                    }
+                }
+        );
+        edittekst.addTextChangedListener(
+                new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if(charSequence.toString() != null) {
+                            AktualnyObraz = Integer.parseInt(charSequence.toString());
+                            UstawObraz();
+                        }
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+
                     }
                 }
         );
